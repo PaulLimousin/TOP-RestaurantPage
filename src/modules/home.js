@@ -1,17 +1,21 @@
 import locationLogoImported from "../images/location-logo.png";
 import clockLogoImported from "../images/clock-logo.png";
+import { displayReservation } from "./website.js";
 let createHome = () => {
   let home = document.createElement("div");
   home.classList.add("home");
   let homeTitle = document.createElement("h1");
-  homeTitle.textContent = "Venez découvrir notre savoureuse cuisine !";
+  homeTitle.textContent = "Venez découvrir nos fameuses pizzas !";
   home.appendChild(homeTitle);
   let homeSecondTitle = document.createElement("h2");
-  homeSecondTitle.textContent = "Fait Maison et avec Amour !";
+  homeSecondTitle.textContent = "Faites Maison et avec Amour !";
   home.appendChild(homeSecondTitle);
   let homeButton = document.createElement("button");
   homeButton.textContent = "Réserver";
   home.appendChild(homeButton);
+  homeButton.addEventListener("click", () => {
+    displayReservation();
+  });
   let aboutContainer = document.createElement("div");
   aboutContainer.classList.add("aboutContainer");
   home.appendChild(aboutContainer);

@@ -38,11 +38,15 @@ nav button {
   color: #fbc99d;
   font-family: "Lobster";
   font-size: 1.5rem;
+  transition: background-color 0.3s;
 }
-
+nav button:hover {
+  color: #ed1245;
+  transition: background-color 0.3s;
+}
 /* **************** MAIN **************** */
 main {
-  height: 85vh;
+  /* height: 85vh; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -57,14 +61,19 @@ main {
   align-items: center;
   width: 50%;
   margin: auto;
+  margin-top: 100px;
 }
 .home h1 {
   font-family: "Lobster";
-  color: #ed1245;
+  /* color: #ed1245; */
   font-size: 3.5rem;
   font-weight: bolder;
   text-align: center;
   margin-bottom: 15px;
+  background: linear-gradient(to right, #ed1245 0%, #fbc99d 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .home h2 {
   font-family: "Lobster";
@@ -82,15 +91,22 @@ main {
   border-radius: 30px;
   cursor: pointer;
   font-family: "Lobster";
-  font-size: 1.2rem;
+  font-size: 1.5rem;
+  transition: background-color 0.3s;
+}
+.home button:hover {
+  background-color: #b10e34;
+  transition: background-color 0.3s;
+  /* color: #fbc99d; */
 }
 .aboutContainer {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  color: #fbc99d;
+  color: white;
+  font-family: "Lobster";
   background-color: rgba(0, 0, 0, 0.418);
-  padding: 15px;
+  padding: 40px 25px;
   border-radius: 10px;
   font-weight: bold;
   font-size: 1.2rem;
@@ -99,7 +115,7 @@ main {
 .aboutContainer img {
   width: 60px;
   height: 60px;
-  background-color: #ed124594;
+  background-color: #fbc99d70;
   border-radius: 30px;
 }
 .addressContainer {
@@ -111,5 +127,38 @@ main {
   gap: 20px;
 }
 /* **************** MENU **************** */
-
+.menu {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  width: 700px;
+  background-color: rgba(0, 0, 0, 0.397);
+  margin-top: 75px;
+  margin-bottom: 75px;
+  padding: 75px 40px;
+  border-radius: 5px;
+}
+.menuCard {
+  background-color: rgba(0, 0, 0, 0.664);
+  border-radius: 10px;
+  padding: 40px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.menuCard:hover {
+  background-color: #fbc99d1e;
+  transition: background-color 0.3s;
+}
+.menu img {
+  width: 200px;
+}
+.menu h2 {
+  color: #fbc99d;
+  text-align: center;
+}
+.menu p {
+  color: white;
+  text-align: center;
+}
 /* **************** RESERVATION **************** */
