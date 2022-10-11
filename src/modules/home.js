@@ -1,3 +1,5 @@
+import locationLogoImported from "../images/location-logo.png";
+import clockLogoImported from "../images/clock-logo.png";
 let createHome = () => {
   let home = document.createElement("div");
   home.classList.add("home");
@@ -10,6 +12,27 @@ let createHome = () => {
   let homeButton = document.createElement("button");
   homeButton.textContent = "Réserver";
   home.appendChild(homeButton);
+  let aboutContainer = document.createElement("div");
+  aboutContainer.classList.add("aboutContainer");
+  home.appendChild(aboutContainer);
+  let addressContainer = document.createElement("div");
+  addressContainer.classList.add("addressContainer");
+  aboutContainer.appendChild(addressContainer);
+  let locationLogo = new Image();
+  locationLogo.src = locationLogoImported;
+  addressContainer.appendChild(locationLogo);
+  let locationText = document.createElement("p");
+  locationText.textContent = "1 Rue de la Paix, Paris 2e";
+  addressContainer.appendChild(locationText);
+  let clockContainer = document.createElement("div");
+  clockContainer.classList.add("clockContainer");
+  aboutContainer.appendChild(clockContainer);
+  let clockLogo = new Image();
+  clockLogo.src = clockLogoImported;
+  clockContainer.appendChild(clockLogo);
+  let clockText = document.createElement("p");
+  clockText.textContent = "Lundi - Dimanche : 10h-23h";
+  clockContainer.appendChild(clockText);
   return home;
 };
 export default createHome;

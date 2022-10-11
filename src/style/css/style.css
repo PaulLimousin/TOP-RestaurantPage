@@ -1,13 +1,15 @@
 /* **************** GLOBAL **************** */
 @font-face {
-  font-family: "Anton";
-  src: url("../../style/fonts/Anton-Regular.ttf");
+  font-family: "Lobster";
+  src: url("../../style/fonts/Lobster-Regular.ttf");
   font-weight: 600;
   font-style: normal;
 }
 body {
   height: 100vh;
   margin: 0;
+  background: url("../../images/background-image.jpg") no-repeat center fixed;
+  background-size: cover;
 }
 
 /* **************** HEADER **************** */
@@ -19,7 +21,7 @@ header {
 }
 header h1 {
   margin: 0 0 0 30px;
-  font-family: "Anton";
+  font-family: "Lobster";
   color: #ed1245;
   font-size: 2.5rem;
   font-weight: bold;
@@ -34,15 +36,13 @@ nav button {
   border: none;
   cursor: pointer;
   color: #fbc99d;
-  font-family: "Anton";
+  font-family: "Lobster";
   font-size: 1.5rem;
 }
 
 /* **************** MAIN **************** */
 main {
-  background: url("../../images/background-image.jpg") no-repeat center fixed;
-  background-size: cover;
-  height: 90vh;
+  height: 85vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -53,22 +53,62 @@ main {
 .home {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 50%;
   margin: auto;
 }
 .home h1 {
-  font-family: "Anton";
+  font-family: "Lobster";
   color: #ed1245;
-  font-size: 2.5rem;
-  font-weight: bold;
+  font-size: 3.5rem;
+  font-weight: bolder;
   text-align: center;
+  margin-bottom: 15px;
 }
 .home h2 {
-  font-family: "Anton";
+  font-family: "Lobster";
   color: #fbc99d;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-style: italic;
   text-align: center;
+  margin-top: 0;
+  margin-bottom: 50px;
+}
+.home button {
+  background-color: #ed1245;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-family: "Lobster";
+  font-size: 1.2rem;
+}
+.aboutContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: #fbc99d;
+  background-color: rgba(0, 0, 0, 0.418);
+  padding: 15px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-top: 50px;
+}
+.aboutContainer img {
+  width: 60px;
+  height: 60px;
+  background-color: #ed124594;
+  border-radius: 30px;
+}
+.addressContainer {
+  display: flex;
+  gap: 20px;
+}
+.clockContainer {
+  display: flex;
+  gap: 20px;
 }
 /* **************** MENU **************** */
 
