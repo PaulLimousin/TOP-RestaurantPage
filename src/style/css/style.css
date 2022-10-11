@@ -1,0 +1,75 @@
+/* **************** GLOBAL **************** */
+@font-face {
+  font-family: "Anton";
+  src: url("../../style/fonts/Anton-Regular.ttf");
+  font-weight: 600;
+  font-style: normal;
+}
+body {
+  height: 100vh;
+  margin: 0;
+}
+
+/* **************** HEADER **************** */
+header {
+  background-color: #042f4b;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+header h1 {
+  margin: 0 0 0 30px;
+  font-family: "Anton";
+  color: #ed1245;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+nav {
+  display: flex;
+  gap: 30px;
+  margin-right: 50px;
+}
+nav button {
+  background-color: #042f4b;
+  border: none;
+  cursor: pointer;
+  color: #fbc99d;
+  font-family: "Anton";
+  font-size: 1.5rem;
+}
+
+/* **************** MAIN **************** */
+main {
+  background: url("../../images/background-image.jpg") no-repeat center fixed;
+  background-size: cover;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* **************** HOME **************** */
+.home {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: auto;
+}
+.home h1 {
+  font-family: "Anton";
+  color: #ed1245;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+.home h2 {
+  font-family: "Anton";
+  color: #fbc99d;
+  font-size: 1.5rem;
+  font-style: italic;
+  text-align: center;
+}
+/* **************** MENU **************** */
+
+/* **************** RESERVATION **************** */

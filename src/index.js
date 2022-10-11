@@ -1,1 +1,2 @@
-console.log("polo");
+import createWebsite from "./modules/website.js";
+createWebsite();
