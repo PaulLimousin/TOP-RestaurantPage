@@ -22,7 +22,7 @@ let createNav = () => {
     displayHome();
   });
   let menuButton = document.createElement("button");
-  menuButton.textContent = "Menu";
+  menuButton.textContent = "Carte";
   nav.appendChild(menuButton);
   menuButton.addEventListener("click", () => {
     displayMenu();

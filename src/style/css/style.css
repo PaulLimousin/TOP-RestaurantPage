@@ -10,6 +10,8 @@ body {
   margin: 0;
   background: url("../../images/background-image.jpg") no-repeat center fixed;
   background-size: cover;
+  font-family: "Lobster";
+  box-sizing: border-box;
 }
 
 /* **************** HEADER **************** */
@@ -18,6 +20,8 @@ header {
   padding: 20px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  /* height: 8vh; */
 }
 header h1 {
   margin: 0 0 0 30px;
@@ -38,15 +42,15 @@ nav button {
   color: #fbc99d;
   font-family: "Lobster";
   font-size: 1.5rem;
-  transition: background-color 0.3s;
+  transition: color 0.3s;
 }
 nav button:hover {
   color: #ed1245;
-  transition: background-color 0.3s;
+  transition: color 0.3s;
 }
 /* **************** MAIN **************** */
 main {
-  /* height: 85vh; */
+  /* height: 90vh; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -61,7 +65,7 @@ main {
   align-items: center;
   width: 50%;
   margin: auto;
-  margin-top: 100px;
+  margin-top: 50px;
 }
 .home h1 {
   font-family: "Lobster";
@@ -93,6 +97,7 @@ main {
   font-family: "Lobster";
   font-size: 1.5rem;
   transition: background-color 0.3s;
+  border: none;
 }
 .home button:hover {
   background-color: #b10e34;
@@ -128,16 +133,24 @@ main {
 }
 /* **************** MENU **************** */
 .menu {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 40px;
   width: 700px;
   background-color: rgba(0, 0, 0, 0.397);
   margin-top: 75px;
   margin-bottom: 75px;
-  padding: 75px 40px;
+  padding: 0px 40px 75px 40px;
   border-radius: 5px;
+}
+.menu h1 {
+  text-align: center;
+  color: #fbc99d;
+  font-size: 3rem;
+  margin: 50px;
+}
+.menuCardContainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
 }
 .menuCard {
   background-color: rgba(0, 0, 0, 0.664);
@@ -145,6 +158,7 @@ main {
   padding: 40px;
   cursor: pointer;
   transition: background-color 0.3s;
+  width: 200px;
 }
 .menuCard:hover {
   background-color: #fbc99d1e;
@@ -162,3 +176,81 @@ main {
   text-align: center;
 }
 /* **************** RESERVATION **************** */
+.reservation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.397);
+  margin-top: 75px;
+  margin-bottom: 75px;
+  padding: 0px 40px 75px 40px;
+  border-radius: 5px;
+}
+.reservation h1 {
+  text-align: center;
+  color: #fbc99d;
+  font-size: 3rem;
+  margin: 50px;
+}
+.reservation form {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  width: 700px;
+}
+.reservation label {
+  color: #fbc99d;
+  text-align: center;
+  font-size: 1.7rem;
+}
+.reservation input {
+  width: 200px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.434);
+  padding: 5px;
+}
+.reservation input[type="date"] {
+  text-align: center;
+}
+.reservation select {
+  border: none;
+  background-color: rgba(255, 255, 255, 0.434);
+  padding: 5px;
+}
+
+.reservation button {
+  background-color: #ed1245;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-family: "Lobster";
+  font-size: 1.5rem;
+  transition: background-color 0.3s;
+  margin-top: 30px;
+  border: none;
+}
+.reservation button:hover {
+  background-color: #b10e34;
+  transition: background-color 0.3s;
+}
+
+/* **************** RESERVATION CONFIRMATION **************** */
+.reservationConfirmation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.397);
+  margin-top: 150px;
+  margin-bottom: 75px;
+  padding: 40px;
+  border-radius: 5px;
+}
+.reservationConfirmation p {
+  color: #fbc99d;
+  font-size: 2rem;
+  text-align: center;
+}

@@ -9,27 +9,26 @@ import pizza8Imported from "../images/pizzas/pizza8.png";
 
 let imagePizzaArray = [];
 let titlePizzaArray = [
-  "Titre1",
-  "Titre",
-  "Titre",
-  "Titre",
-  "Titre",
-  "Titre",
-  "Titre",
-  "Titre",
+  "Cannibale",
+  "Basquaise",
+  "Pepperoni",
+  "Hawaïenne",
+  "Texas Grill",
+  "Veggie",
+  "4 Fromages",
+  "Sucrée",
 ];
 let descriptionPizzaArray = [
-  "Description1",
-  "Description",
-  "Description",
-  "Description",
-  "Description",
-  "Description",
-  "Description",
-  "Description",
+  "Sauce barbecue, mozzarella, poulet rôti, merguez, haché au bœuf assaisonné",
+  "Sauce tomate, mozzarella, champignons de Paris, poulet rôti, duo de poivrons, tomates fraîches, oignons, origan",
+  "Sauce tomate, mozzarella, pepperoni, duo de poivrons, oignons, piments jalapeños",
+  "Sauce tomate, mozzarella, jambon, ananas",
+  "Sauce tomate, mozzarella, bacon, haché au bœuf assaisonné*, sauce Texas grill au goût grillé, oignons frits croustillants",
+  "Sauce tomate, mozzarella, tomates fraiches françaises, oignons, champignons de Paris, duo de poivrons, chèvre, roquette",
+  "Sauce tomate, mozzarella, chèvre, emmental, Fourme d’Ambert AOP",
+  "Chocolat noir, crumble, crème pâtissière",
 ];
 
-imagePizzaArray.push(pizza1Imported);
 imagePizzaArray.push(pizza2Imported);
 imagePizzaArray.push(pizza3Imported);
 imagePizzaArray.push(pizza4Imported);
@@ -37,11 +36,16 @@ imagePizzaArray.push(pizza5Imported);
 imagePizzaArray.push(pizza6Imported);
 imagePizzaArray.push(pizza7Imported);
 imagePizzaArray.push(pizza8Imported);
-
+imagePizzaArray.push(pizza1Imported);
 let createMenu = () => {
   let menu = document.createElement("div");
   menu.classList.add("menu");
-
+  let menuTitle = document.createElement("h1");
+  menuTitle.textContent = "Carte";
+  menu.appendChild(menuTitle);
+  let menuCardContainer = document.createElement("div");
+  menuCardContainer.classList.add("menuCardContainer");
+  menu.appendChild(menuCardContainer);
   for (let i = 0; i < 8; i++) {
     let menuCard = document.createElement("div");
     menuCard.classList.add("menuCard");
@@ -52,7 +56,7 @@ let createMenu = () => {
     let cardDescription = document.createElement("p");
     cardDescription.textContent = descriptionPizzaArray[i];
     menuCard.appendChild(cardDescription);
-    menu.appendChild(menuCard);
+    menuCardContainer.appendChild(menuCard);
   }
   return menu;
 };
