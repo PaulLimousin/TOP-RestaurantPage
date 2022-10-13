@@ -55,6 +55,23 @@ let createReservation = () => {
   reservationButton.textContent = "Valider";
   reservation.appendChild(reservationButton);
   reservationButton.addEventListener("click", () => {
+    if (
+      nameInput.value === "" ||
+      phoneInput.value === "" ||
+      calendarInput.value === "" ||
+      timeInput.value === ""
+    ) {
+      if (document.querySelector(".errorReservationMessage") !== null) {
+        return;
+      }
+      let errorReservationMessage = document.createElement("p");
+      errorReservationMessage.textContent =
+        "Veuillez remplir tous les champs, merci !";
+      errorReservationMessage.classList.add("errorReservationMessage");
+      reservation.insertBefore(errorReservationMessage, reservationButton);
+      return;
+    }
+
     let main = document.querySelector("main");
     main.textContent = "";
     let reservationConfirmation = document.createElement("div");
